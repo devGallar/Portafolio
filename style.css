@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #18181b;
+}
+h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  text-align: center;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-logo {
+  max-width: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1d4ed8;
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+.link-icon {
+  display: flex;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #1d4ed8;
+  z-index: -100;
+}
+
+header {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+header .content h4 {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+header .content span {
+  color: #1d4ed8;
+  font-size: 2rem;
+}
+
+header .content h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+header .content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+header .image {
+  position: relative;
+}
+
+header .image img {
+  max-width: 450px;
+  margin: auto;
+}
+
+#about-content {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#about-content > div:first-child {
+  flex-basis: 30%;
+}
+
+#about-content > div:last-child {
+  flex-basis: 70%;
+}
+.about p {
+  padding-left: 30px;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.about-profile {
+  width: 800px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#about-description {
+  padding: 1rem;
+}
+.project {
+  display: flex;
+  padding: 2rem;
+}
+.project-card {
+  background-color: #27272a;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 30px;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.project-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.project-button:hover {
+  transform: scale(1.01);
+}
+
+.technologies {
+  padding: 50px;
+  text-align: center;
+}
+
+.tech-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.logo-container {
+  width: calc(33.33% - 40px);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 80px;
+  height: 80px;
+}
+
+.logo-container p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+footer{
+  margin-top: 1rem;
+  display: flex;
+}
