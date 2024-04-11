@@ -20,6 +20,8 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #18181b;
+  max-width: 100%;
+  overflow-x:hidden;
 }
 h2 {
   color: #fff;
@@ -273,4 +275,84 @@ header .image img {
 footer{
   margin-top: 1rem;
   display: flex;
+}
+
+@media (max-width: 1280px) {
+  nav {
+    padding: 2rem;
+  }
+  nav a,
+  nav button,
+  nav ul li {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 965px) {
+  nav{
+    display: none;
+  }
+  header {
+    margin-top: 2rem;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  header .nav-links {
+  justify-content: center; 
+  }
+  
+
+  header .image {
+    grid-column: 1 / span 1; 
+  }
+
+  .project {
+    flex-wrap: wrap; 
+    margin-right: -1rem; 
+    margin-left: -1rem; 
+  }
+
+  .project-card {
+    width: calc(100% - 2rem);
+    margin-bottom: 2rem; 
+    margin-right: 1rem; 
+    margin-left: 1rem; 
+  }
+}
+
+@media (max-width: 700px){
+  header .nav-links {
+    flex-wrap: wrap; 
+    justify-content: end;
+  }
+
+  .link {
+    flex-basis: 40%; 
+    text-align: center; 
+  }
+  #about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-profile{
+    width: 300px;
+    height: 300px;
+  }
+  .about-image {
+    order: -1; 
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 580px){
+  header .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .link {
+    flex-basis: 60%;
+  }
 }
