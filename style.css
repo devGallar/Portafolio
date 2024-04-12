@@ -46,20 +46,20 @@ nav {
   max-width: 100px;
 }
 
-.nav-links {
+.nav-links,.header-links {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 3rem;
 }
 
-.link a {
+.link a,.header-link a{
   position: relative;
   padding-bottom: 0.75rem;
   color: #fff;
 }
 
-.link a::after {
+.link a::after, .header-link a::after{
   content: "";
   position: absolute;
   height: 2px;
@@ -70,13 +70,13 @@ nav {
   transition: all 0.3s ease;
 }
 
-.link a:hover::after {
+.link a:hover::after,.hedaer-link a:hover::after {
   width: 70%;
 }
-.link-icon {
+.link-icon,.header-link-icon  {
   display: flex;
 }
-.icon {
+.icon,.header-icon {
   width: 24px;
   height: 24px;
   margin-right: 4px;
@@ -287,10 +287,16 @@ footer{
     padding: 0 1rem;
   }
 }
-@media (max-width: 965px) {
-  nav{
+@media (max-width: 1020px){
+  #nav-logos{
     display: none;
   }
+  nav{
+    justify-content: center;
+  }
+}
+@media (max-width: 965px) {
+  
   header {
     margin-top: 2rem;
     grid-template-columns: 1fr; 
@@ -298,7 +304,7 @@ footer{
     text-align: center;
   }
   
-  header .nav-links {
+  .header-links {
   justify-content: center; 
   }
   
@@ -321,13 +327,16 @@ footer{
   }
 }
 
-@media (max-width: 700px){
-  header .nav-links {
+@media (max-width: 750px){
+  nav{
+    display: none;
+  }
+  .header-links {
     flex-wrap: wrap; 
     justify-content: end;
   }
 
-  .link {
+  .header-link {
     flex-basis: 40%; 
     text-align: center; 
   }
@@ -346,13 +355,13 @@ footer{
   }
 }
 @media (max-width: 580px){
-  header .nav-links {
+  .header-links {
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
 
-  .link {
+  .header-link {
     flex-basis: 60%;
   }
 }
