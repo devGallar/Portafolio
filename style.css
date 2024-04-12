@@ -42,9 +42,7 @@ nav {
   gap: 2rem;
 }
 
-.nav-logo {
-  max-width: 100px;
-}
+
 
 .nav-links,.header-links {
   list-style: none;
@@ -329,7 +327,59 @@ footer{
 
 @media (max-width: 750px){
   nav{
+    justify-content: right;
+  }
+  .hamburger-menu {
+    display: flex;
+    align-items: start;
+    cursor: pointer;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    right: 1rem; 
+    z-index: 1000; 
+    transition: transform 0.3s ease; 
+  }
+
+  .hamburger-icon {
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    background-image: url('img/hamburguesa.png');
+    background-size: cover;
+  }
+
+  .nav-links {
     display: none;
+    flex-direction: column;
+    position: fixed; 
+    top: 0px;
+    left: 0;
+    background-color: #18181b; 
+    width: 100vw; 
+    height: 100vh; 
+    z-index: 999; 
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); 
+  }
+
+  .nav-links.menu-open {
+    padding-top: 80px;
+    transform: translateX(0);
+  }
+
+  .nav-links .link {
+    padding: 1rem;
+  }
+  .hamburger-menu.scroll-down {
+    transform: translateY(100%);
+  }
+
+  .nav-links .link {
+    padding: 1rem;
+  }
+  .menu-open {
+    display: flex !important;
   }
   .header-links {
     flex-wrap: wrap; 
@@ -354,6 +404,8 @@ footer{
     margin-bottom: 1rem;
   }
 }
+
+
 @media (max-width: 580px){
   .header-links {
     display: flex;
