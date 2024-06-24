@@ -162,9 +162,7 @@ header .image img {
   display: flex;
   padding: 2rem;
 }
-#project .project-card{
-  margin: 0 auto;
-}
+
 .project-card {
   background-color: #27272a;
   border-radius: 20px;
@@ -177,6 +175,9 @@ header .image img {
   margin-bottom: 30px;
   margin-right: 1rem;
   margin-left: 1rem;
+}
+#proyectos .project{
+  justify-content: center;
 }
 
 .project-image {
